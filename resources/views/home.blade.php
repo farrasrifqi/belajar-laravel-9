@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Blade Templating</a>
@@ -35,12 +36,22 @@
             </div>
         </div>
     </nav>
+    {{-- end Navbar --}}
 
     <div class="container mt-5">
         <h1>Ini adalah halamn home</h1>
         <h2>Selamat datang, {{ $name }} Anda adalah {{ $role }}</h2>
-    </div>
 
+        {{-- if and else if --}}
+        @if ($role == 'admin')
+            <a href="#">Masuk ke halaman admin</a>
+        @elseif ($role == 'staff')
+            <a href="#">Masuk ke halaman gudang</a>
+        @else
+            <a href="#">Masuk ke halaman ini</a>
+        @endif
+        {{-- end if and else if --}}
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
