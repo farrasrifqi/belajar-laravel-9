@@ -43,15 +43,32 @@
         <h2>Selamat datang, {{ $name }} Anda adalah {{ $role }}</h2>
 
         {{-- if and else if --}}
-        @if ($role == 'admin')
+        {{-- @if ($role == 'admin')
             <a href="#">Masuk ke halaman admin</a>
         @elseif ($role == 'staff')
             <a href="#">Masuk ke halaman gudang</a>
         @else
             <a href="#">Masuk ke halaman ini</a>
-        @endif
+        @endif --}}
         {{-- end if and else if --}}
+
+        @switch($role)
+            @case($role == 'admin')
+                <a href="">Masuk ke halaman admin</a>
+            @break
+
+            @case($role == 'staff')
+                <a href="">Masuk ke halaman gudang</a>
+            @break
+
+            @default
+                <a href="#">Masuk ke halaman ini</a>
+        @endswitch
+
+
+
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
