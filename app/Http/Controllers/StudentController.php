@@ -33,6 +33,7 @@ class StudentController extends Controller
 
         // eloquent
         // $student = Student::all();
+        
         //create
         // Student::create([
         //     'name' => 'eloquent',
@@ -40,6 +41,12 @@ class StudentController extends Controller
         //     'nis' => '0163419',
         //     'class_id' => 2
         // ]);
+
+        //update
+        Student::find(27)->update([
+            'name' => 'eloquent 2',
+            'class_id' => 1
+        ]);
         
         // dd($student);
 
