@@ -15,7 +15,11 @@ class StudentController extends Controller
         // return view('student', ['studentList' => $student]);
 
         //query builder
-        $student = DB::table('students')->get();
+        // $student = DB::table('students')->get();
+
+        // eloquent
+        $student = Student::all();
+        
         dd($student);
         
     }
