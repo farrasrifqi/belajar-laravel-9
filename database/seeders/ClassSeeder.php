@@ -18,11 +18,20 @@ class ClassSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
         ClassRoom::truncate();
         Schema::enableForeignKeyConstraints();
-        
-        ClassRoom::insert([
-            'name' => 'Aiu',
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now()
-        ]);
+
+        $data = [
+            ['name' => '1A'],
+            ['name' => '1B'],
+            ['name' => '1C'],
+            ['name' => '1D'],
+        ];
+
+        foreach ($data as $value) {
+            ClassRoom::insert([
+                'name' => 'Aiu',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ]);
+        }
     }
 }
