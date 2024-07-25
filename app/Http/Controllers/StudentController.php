@@ -16,11 +16,18 @@ class StudentController extends Controller
 
         //query builder
         // $student = DB::table('students')->get();
+        //create
+        DB::table('students')->insert([
+            'name' => 'query builder',
+            'gender' => 'L',
+            'nis' => '0167289',
+            'class_id' => 1
+        ])
 
         // eloquent
-        $student = Student::all();
+        // $student = Student::all();
         
-        dd($student);
+        // dd($student);
         
     }
 }
