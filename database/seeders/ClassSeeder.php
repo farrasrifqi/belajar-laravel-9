@@ -28,7 +28,7 @@ class ClassSeeder extends Seeder
 
         foreach ($data as $value) {
             ClassRoom::insert([
-                'name' => 'Aiu',
+                'name' => $value['name'],
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ]);
