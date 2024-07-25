@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Faker\Factory as faker;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Arr;
 
@@ -15,12 +16,12 @@ class StudentFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
-        $faker = Faker\Factory::create();
+        $faker = faker::create();
         return [
             'name' => $faker->name(),
-            'gender' => Arr::random(['L'. 'P']),
+            'gender' => Arr::random(['L', 'P']),
             'nis' => mt_rand(0000001, 9999999),
             'class_id' => Arr::random([1, 2, 3, 4]),
         ];
