@@ -22,12 +22,20 @@ class StudentController extends Controller
             'gender' => 'L',
             'nis' => '0167289',
             'class_id' => 1
-        ])
+        ]);
 
         // eloquent
         // $student = Student::all();
+        //create
+        Student::create([
+            'name' => 'eloquent',
+            'gender' => 'p',
+            'nis' => '0163419',
+            'class_id' => 2
+        ]);
         
         // dd($student);
-        
+
+        // insert into students ('name', 'gender', 'nis', 'class_id') values(.....)
     }
 }
