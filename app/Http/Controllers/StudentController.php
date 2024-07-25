@@ -32,7 +32,7 @@ class StudentController extends Controller
         // ]);
 
         //delete
-        DB::table('students')->where('id', 25)->delete();
+        // DB::table('students')->where('id', 25)->delete();
 
         // eloquent
         // $student = Student::all();
@@ -50,6 +50,9 @@ class StudentController extends Controller
         //     'name' => 'eloquent 2',
         //     'class_id' => 1
         // ]);
+
+        //delete
+        Student::find(23)->delete();
         
         // dd($student);
 
