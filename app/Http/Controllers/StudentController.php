@@ -26,10 +26,13 @@ class StudentController extends Controller
         // ]);
 
         //update
-        DB::table('students')->where('id', 26)->update([
-            'name' => 'query builder 2',
-            'class_id' => 3
-        ]);
+        // DB::table('students')->where('id', 26)->update([
+        //     'name' => 'query builder 2',
+        //     'class_id' => 3
+        // ]);
+
+        //delete
+        DB::table('students')->where('id', 25)->delete();
 
         // eloquent
         // $student = Student::all();
@@ -43,10 +46,10 @@ class StudentController extends Controller
         // ]);
 
         //update
-        Student::find(27)->update([
-            'name' => 'eloquent 2',
-            'class_id' => 1
-        ]);
+        // Student::find(27)->update([
+        //     'name' => 'eloquent 2',
+        //     'class_id' => 1
+        // ]);
         
         // dd($student);
 
