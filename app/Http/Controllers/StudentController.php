@@ -52,7 +52,7 @@ class StudentController extends Controller
         // ]);
 
         //delete
-        Student::find(23)->delete();
+        Student::find(23)->delete();    
         
         // dd($student);
 
