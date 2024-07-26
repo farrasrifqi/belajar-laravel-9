@@ -10,10 +10,10 @@
     <thead>
         <tr>
             <th>#</th>
-            <th>name</th>
-            <th>gender</th>
-            <th>nis</th>
-            <th>class id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Nis</th>
+            <th>Class</th>
         </tr>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
                 <td>{{ $data->name }}</td>
                 <td>{{ $data->gender }}</td>
                 <td>{{ $data->nis }}</td>
-                <td>{{ $data->class_id }}</td>
+                <td>{{ $data->class['name']}}</td>
             </tr>
         @endforeach
     </tbody>
