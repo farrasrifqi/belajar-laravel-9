@@ -11,51 +11,22 @@ class StudentController extends Controller
 {
     public function index()
     {
-        // $student = Student::all();
-        // return view('student', ['studentList' => $student]);
 
-        //query builder
-        // $student = DB::table('students')->get();
+        //Collection methods yang berguna untuk memproses data yang berupa array.
+        //dengan adanya collection ini, kita tidak perlu repot repot lagi menulis query untuk memproses data karena dengan 
+        //method method yang ada di collection tersebut seakan akan menuliskan query tersebut untuk kita
+
+        $nilai = [1, 4, 5, 9, 5, 3, 5, 8, 4, 9, 10, 2, 9, 3];
+
+        //php biasa
+        // $countNilai = count($nilai);
+        // $totalNilai = array_sum($nilai);
+        // $nilaiRataRata = $totalNilai / $countNilai;
+
+        //collection
+        $nilaiRataRata = collect($nilai)->avg();
+
+        dd($nilaiRataRata);
         
-        //create
-        // DB::table('students')->insert([
-        //     'name' => 'query builder',
-        //     'gender' => 'L',
-        //     'nis' => '0167289',
-        //     'class_id' => 1
-        // ]);
-
-        //update
-        // DB::table('students')->where('id', 26)->update([
-        //     'name' => 'query builder 2',
-        //     'class_id' => 3
-        // ]);
-
-        //delete
-        // DB::table('students')->where('id', 25)->delete();
-
-        // eloquent
-        // $student = Student::all();
-        
-        //create
-        // Student::create([
-        //     'name' => 'eloquent',
-        //     'gender' => 'p',
-        //     'nis' => '0163419',
-        //     'class_id' => 2
-        // ]);
-
-        //update
-        // Student::find(27)->update([
-        //     'name' => 'eloquent 2',
-        //     'class_id' => 1
-        // ]);
-
-        //delete
-        Student::find(23)->delete();    
-        
-        // dd($student);
-
-        // insert into students ('name', 'gender', 'nis', 'class_id') values(.....)
     }
 }
