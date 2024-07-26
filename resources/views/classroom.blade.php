@@ -20,7 +20,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $data->name }}</td>
                     <td>
-                        @foreach ($data->student as $student)
+                        @foreach ($data->students as $student)
                            - {{ $student['name'] }} <br>
                         @endforeach
                     </td>
