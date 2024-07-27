@@ -14,6 +14,7 @@
             <th>Gender</th>
             <th>Nis</th>
             <th>Class</th>
+            <th>Ekskul</th>
         </tr>
     </thead>
     <tbody>
@@ -24,6 +25,11 @@
                 <td>{{ $data->gender }}</td>
                 <td>{{ $data->nis }}</td>
                 <td>{{ $data->class['name']}}</td>
+                <td>
+                    @foreach ($data->ekskuls as $item)
+                        - {{ $item->name }} <br>
+                    @endforeach
+                </td>
             </tr>
         @endforeach
     </tbody>

@@ -9,7 +9,7 @@ class EkskulController extends Controller
 {
     public function index()
     {
-        $ekskul = Ekskul::all();
+        $ekskul = Ekskul::with('students')->get();
         
         return view('ekskul', ['ekskulList' => $ekskul]);
     }

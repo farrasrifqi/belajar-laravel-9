@@ -13,4 +13,9 @@ class Student extends Model
     {
         return $this->belongsTo(ClassRoom::class);
     }
+    
+    public function ekskuls()
+    {
+        return $this->belongsToMany(Ekskul::class, 'student_ekskul', 'student_id', 'ekskul_id');
+    }
 }
