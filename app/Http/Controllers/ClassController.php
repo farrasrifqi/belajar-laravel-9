@@ -9,18 +9,7 @@ class ClassController extends Controller
 {
     public function index()
     {
-        // lazy loud
-        // $class = ClassRoom::all();
-        // select * from table class
-        // select * from student where class = 1A
-        // select * from student where class = 1B
-        // select * from student where class = 1C
-        // select * from student where class = 1D
-
-        // eager loud
-        $class = ClassRoom::with('students')->get();
-        // select * from table class
-        // select * from student where class in (1a,1b, 1c, 1d)
+        $class = ClassRoom::with('students', 'homeroomTeacher')->get();
         return view('classroom', ['classList' => $class]);
     }
 }
